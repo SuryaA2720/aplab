@@ -1,0 +1,13 @@
+void setup() 
+{ 
+pinMode(A3,INPUT); 
+Serial.begin(9600); 
+}  
+void loop() 
+{ 
+int X; 
+X = analogRead(A3); 
+Serial.print("Moisture Value:"); 
+Serial.println(X); 
+delay(3000); 
+} 
