@@ -1,0 +1,13 @@
+int ledPin = 2; 
+void setup() { 
+Serial.begin(9600); 
+pinMode(A0, INPUT); 
+pinMode(ledPin, OUTPUT); 
+} 
+void loop() { 
+int value = analogRead(A0); 
+Serial.println("Analog Value: "); 
+Serial.println(value); 
+analogWrite(2, map(analogRead(A0), 0, 1023, 0, 255)); 
+delay(100); 
+} 
