@@ -1,0 +1,14 @@
+void setup() 
+{ 
+pinMode(A2,INPUT); 
+Serial.begin(9600); 
+} 
+void loop() 
+{ 
+float x= analogRead(A2); 
+float y = (x/1023)*5; 
+Serial.println("Voltage Value:"); 
+Serial.println(x); 
+Serial.println(y); 
+delay(3000); 
+}
