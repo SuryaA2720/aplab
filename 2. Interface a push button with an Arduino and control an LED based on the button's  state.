@@ -1,0 +1,17 @@
+void setup() 
+{ 
+pinMode(10, OUTPUT); 
+pinMode(5, INPUT); 
+} 
+void loop() 
+{ 
+int i; 
+i = digitalRead(5);  
+if(i==1) 
+{ 
+digitalWrite(10, HIGH); 
+} 
+else 
+{ 
+digitalWrite(10,LOW); 
+}} 
