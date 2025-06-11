@@ -1,0 +1,20 @@
+#include<Servo.h> 
+Servo S1; 
+void setup() 
+{ 
+S1.attach(2);  
+} 
+void loop() 
+{ 
+int i; 
+for(i=0;i<=90;i++) 
+{ 
+S1.write(i); 
+delay(200); 
+} 
+for(i=90;i>=0;i--) 
+{ 
+S1.write(i); 
+delay(200); 
+} 
+} 
