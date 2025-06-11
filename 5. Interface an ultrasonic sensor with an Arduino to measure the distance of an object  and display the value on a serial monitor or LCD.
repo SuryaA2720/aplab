@@ -1,0 +1,21 @@
+int time; 
+int distance; 
+int cm; 
+void setup() 
+{ 
+pinMode(3, OUTPUT); 
+pinMode(2, INPUT); 
+Serial.begin(9600); 
+} 
+void loop() 
+{ 
+digitalWrite(3,LOW); 
+delay(1); 
+digitalWrite(3,HIGH); 
+delay(10); 
+digitalWrite(3,LOW); 
+time = pulseIn(2,HIGH); 
+distance = time * 0.341/2; 
+cm = distance/100; 
+Serial.println(cm); 
+}
