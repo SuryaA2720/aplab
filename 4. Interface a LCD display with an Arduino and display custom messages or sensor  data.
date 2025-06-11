@@ -1,0 +1,15 @@
+#include<LiquidCrystal.h> 
+LiquidCrystal lcd(13,12,11,10,9,8); 
+char text1[] = "Rathinam"; 
+char text2[] = "Technical Campus"; 
+void setup() 
+{ 
+lcd.begin(16,2); 
+lcd.setCursor(0,0); 
+lcd.print(text1); 
+lcd.setCursor(2,1); 
+lcd.print(text2); 
+} 
+void loop() 
+{ 
+} 
